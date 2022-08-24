@@ -1,0 +1,16 @@
+body {
+    background-image: url('../images/[六味帝皇酱]洛丽塔.webp');
+    /* 是否重复显示 */
+    background-repeat:no-repeat;
+    /* 背景是否随着元素的内容滚动。*/
+    background-attachment:fixed;
+    /* 图像缩放 */
+    background-size: cover;
+    /* 图像初始位置 */
+    background-position:right;
+}
+.back {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
