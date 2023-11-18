@@ -1,42 +1,22 @@
-    /*超链接颜色*/
+
 body {
-  color: rgb(0, 173, 181);
-  background-color: rgba(0, 0, 0, 0);
-  font-family: '霞鹜臻楷';
+  background-color: #24273a;
   text-align: center;
 
 }
 
-.bgimg {
-  background-image: url(../Other/51.jxl);
-  background-attachment: fixed;                 /*图片不随页面滚动*/
-  background-size: cover;                       /*图片填满屏幕*/
-  background-position: center;                  /*图片居中*/
-}
-
-.glass {
-  position: absolute;
-  width: 20%;
-  height: 40%;
-  top: 30%;
-  left: 40%;
-  border-radius: 20px;
-  color: #eee;
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(4px);
-  box-shadow: inset 1px 1px 6px rgba(255, 255, 255, 0.1),
-              2px 2px 15px rgba(0, 0, 0, 0.1);
-  animation: am ease-out 1s 0.2s backwards;
-}
-
-@keyframes am {
-  0%  { transform: translateY(8px); opacity: 0;}
-  100%{ transform: translateY(0px); opacity: 1;}
+h1 {
+  color: #cad3f5;
+  font-family: Radon;
 }
 
 
-
+/* 重命名字体 */
 @font-face {
-  font-family: '霞鹜臻楷';
-  src: url('../LXGWZhenKai.woff2');
+  /* EN */
+  font-family: 'Neon';
+  src: url('../MonaspaceNeonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
+  font-family: 'Radon';
+  src: url('../MonaspaceRadonVarVF[wght\,wdth\,slnt].woff2') format('woff2');
+  /* Uni */
 }

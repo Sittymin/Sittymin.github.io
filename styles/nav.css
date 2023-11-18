@@ -1,0 +1,62 @@
+/* 导航栏部分 */
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    background-color: #1e2030; /* 导航栏背景颜色 */
+    display: flex;
+    justify-content: space-around;
+    border-radius: 15px;
+}
+
+nav ul li {
+    flex: 1 1 auto; /* 每个列表项占据相同的空间 */
+    color: white; /* 链接文字颜色 */
+    text-align: center;
+    padding: 2% 0;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+nav ul li::before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #8aadf4;
+    transition: all 0.3s ease;
+}
+
+  /* 针对导航栏链接的悬停效果 */
+nav ul li:hover {
+    background-color: #5b6078; /* 鼠标悬停时的背景颜色 */
+}
+
+nav ul li:hover::before {
+    width: 100%;
+    left: 0;
+}
+  /* 针对第一个和最后一个列表项的悬停效果 */
+nav ul li:first-child {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+nav ul li:last-child {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+nav ul li:first-child:hover {
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+
+nav ul li:last-child:hover {
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
