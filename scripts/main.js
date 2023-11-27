@@ -17,6 +17,7 @@ let images = [
 ];
 
 document.addEventListener("DOMContentLoaded", function() {
+    nextImage();
     document.querySelector("#next").addEventListener("click", nextImage);
     document.querySelector("#back").addEventListener("click", backImage);
 });
