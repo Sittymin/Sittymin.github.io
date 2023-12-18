@@ -1,39 +1,48 @@
-let first_button = document.querySelector("#the_first_button");
-first_button.addEventListener("click", the_button);
+let left = document.querySelector(".button-left");
+let right = document.querySelector(".button-right");
+let index = 0;
+let m = document.querySelectorAll(".m");
+let time;
+let images = document.querySelector(".images");
 
-function the_button () {
-    alert("我是一个按钮!")
-};
-
-
-let currentImageIndex = 0;
-let images = [
-    './Other/BG_CS_Trinity_15.jpg',
-    './Other/BG_CS_Trinity_16.jpg',
-    './Other/BG_CS_Trinity_17.jpg',
-    './Other/BG_CS_Trinity_18.jpg',
-    './Other/BG_CS_Trinity_19_1.jpg',
-    './Other/BG_CS_Trinity_19_2.jpg',
-];
-
-document.addEventListener("DOMContentLoaded", function() {
-    nextImage();
-    document.querySelector("#next").addEventListener("click", nextImage);
-    document.querySelector("#back").addEventListener("click", backImage);
-});
-function nextImage() {
-    let currentImage = document.querySelector("#image");
-    currentImage.src = images[currentImageIndex];
-    currentImageIndex = (currentImageIndex + 1) % images.length;
-}
-function backImage() {
-    let currentImage = document.querySelector("#image");
-    currentImage.src = images[currentImageIndex];
-    currentImageIndex = (currentImageIndex - 1) === -1 ? images.length - 1 : currentImageIndex - 1;
+function toImage (index) {
+    let width = document.querySelector(".shell").clientWidth;
+    images.style.transform = 'translateX(' + (index * -width) + 'px)';
 }
 
-setInterval(nextImage, 3000)
+function nextImage () {
+    if (index < m.length - 1) {
+        index++;
+    } else {
+        index = 0;
+    }
+    toImage(index);
+}
 
+function prevImage () {
+    if (index > 0) {
+        index--;
+    } else {
+        index = m.length - 1;
+    }
+    toImage(index);
+}
 
+function Timer () {
+    time = setInterval(() => {
+        nextImage();
+        toImage(index);
+    }, 3000)
+}
 
-//图片切换
+left.addEventListener("click", () => {
+    prevImage()
+    clearInterval(time);
+    Timer();
+})
+right.addEventListener("click", () => {
+    nextImage()
+    clearInterval(time);
+    Timer();
+})
+Timer();

@@ -1,17 +1,104 @@
 
 body {
-  background-color: #24273a;
-  text-align: center;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: linear-gradient(to top right,
+      #91defe,
+      #ff92f4);
 }
 
-h1 {
-  color: #cad3f5;
-  font-family: Radon;
+
+
+
+.shell {
+  width: 1200px;
+  height: 600px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
-p {
-  color: #cad3f5;
+.images {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  width: 500%;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  left: 0;
+  transition: transform 0.6s cubic-bezier(0.1, 0.7, 0.1, 1);
+}
+
+li {
+  list-style: none;
+}
+
+.img {
+  width: 100%;
+  background-size: cover;
+}
+
+.img:nth-child(1) {
+  background-image: url("../Other/BG_CS_Trinity_15.jpg");
+}
+.img:nth-child(2) {
+  background-image: url("../Other/BG_CS_Trinity_16.jpg");
+}
+.img:nth-child(3) {
+  background-image: url("../Other/BG_CS_Trinity_17.jpg");
+}
+.img:nth-child(4) {
+  background-image: url("../Other/BG_CS_Trinity_18.jpg");
+}
+.img:nth-child(5) {
+  background-image: url("../Other/BG_CS_Trinity_19_1.jpg");
+}
+.img:nth-child(6) {
+  background-image: url("../Other/BG_CS_Trinity_19_2.jpg");
+}
+
+
+.min {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 0px;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.m {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: solid rgba(255, 255, 255, 0.5) 5px;
+  background-color: #fff;
+  margin: 0 10px;
+}
+
+.button {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  user-select: none;
+}
+
+.button-left,
+.button-right {
+  font-size: 50px;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 0 20px;
+  cursor: pointer;
+  line-height: 600px;
+  color: #fff;
 }
 
 /* 重命名字体 */
