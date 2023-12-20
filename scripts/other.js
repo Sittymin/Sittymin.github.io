@@ -9,7 +9,7 @@ button.addEventListener('click', () => {
         body: JSON.stringify({
             userName: "test",
             password: "123456",
-            phonenumber: "1",
+            phonenumber: "123444444",
             sex: "0"
         })
     })
