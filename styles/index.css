@@ -101,6 +101,44 @@ li {
   color: #fff;
 }
 
+.mathurl {
+
+
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  top: 5px;
+  padding: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 10%;
+  background-color: #eff1f5;
+  color:#4c4f69;
+  text-decoration: none;
+}
+
+.mathurl:hover {
+  background-color: #4c4f69;
+  color: #eff1f5;
+}
+
+.mathurl::after {
+  content: '';
+  position: absolute;
+  top: -2px; /* 根据边框宽度调整 */
+  left: -2px; /* 根据边框宽度调整 */
+  right: -2px; /* 根据边框宽度调整 */
+  bottom: -2px; /* 根据边框宽度调整 */
+  border: 2px solid transparent;
+  border-radius: 10%; /* 保持和父元素相同的圆角 */
+  pointer-events: none; /* 防止伪元素影响点击事件 */
+}
+
+.mathurl:active::after {
+  border: solid #eff1f5 5px;
+  border-radius: 10px;
+}
+
 /* 重命名字体 */
 @font-face {
   /* EN */
